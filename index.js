@@ -6,7 +6,11 @@ let app = express();
 app.use(body.urlencoded({extended: true}));
 var request = require('request');
 
+
 app.use(cors())
+app.set('port', (process.env.PORT || 5000));
+
+
 
 var Birth = function () {
 this.age = null;
@@ -88,7 +92,7 @@ app.route('/calculated')
 
 
 
-app.listen(3000, function (req, res){
+app.listen(port, function (req, res){
 	
 	console.log('listening sir!');
 })
