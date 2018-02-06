@@ -14,9 +14,8 @@
 $(document).ready(function(){
 $.ajax({ type:'GET',
 dataType:"json",
-url:'http://127.0.0.1:3000/c',
+url:'https://naturalguy4/herokuapp.com/c',
 		 success: function(data) {
-		 console.log(data)
 		        var grad = document.createTextNode(data.A);
                 var age = document.createTextNode(data.Y);
 		        var quoteData = document.createTextNode(data.body);
@@ -36,20 +35,7 @@ url:'http://127.0.0.1:3000/c',
 
 
 <script>
-$(document).ready(function(){
-$.ajax({ type:'GET',
-dataType:"json",
-url:'http://127.0.0.1:3000/calc',
-		 success: function(data) {
-		 console.log(data.body)
-		 
-		 }
-		 
-         
-        });
-		
 
-})
 
 </script>
 
